@@ -1,1 +1,1 @@
-# Azure-AZ900
+# This repository contains project related to AWS
