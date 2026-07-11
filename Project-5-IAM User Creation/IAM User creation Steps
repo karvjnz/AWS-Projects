@@ -1,1 +1,15 @@
+Host a static website using AWS S3 (Amazon Simple Storage Service)
+=====================================================================
 
+step-by-step tutorial on how to host a static website using AWS S3 (Amazon Simple Storage Service). The tutorial explains how to deploy a website without the need for traditional servers.
+
+Key sections:
+=============
+1. AWS Account and IAM User: Setting up an AWS Free Tier account and creating an IAM User for secure, authorized access.
+2. Creating an S3 Bucket: How to create an S3 Bucket and upload your index.html file to store your website content.
+3. Static Website Hosting: Enabling the 'Static website hosting' feature in the S3 bucket settings to generate a public URL for your site.
+4. Bucket Policy: Attaching a JSON-based bucket policy to grant public read access to your website files.
+5. Testing and Cleanup: Accessing the hosted website in a browser to verify it works, followed by instructions on how to delete the bucket to avoid unnecessary charges.
+
+
+Source: https://www.youtube.com/watch?v=W0j9k66ziuE&t=251s
