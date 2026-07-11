@@ -1,0 +1,32 @@
+Introduction to Amazon Simple Notification Service (SNS), explaining its Pub-Sub (Publish-Subscribe) model through a practical demonstration.
+===============================================================================================================================================
+What is Amazon SNS?
+------------------
+* Amazon SNS is a fully managed messaging service that enables broadcast-style communication
+* It acts as a message broker where a publisher sends a message to a topic, and all registered subscribers receive that message instantly
+
+* Real-world example: When you place an order on Amazon, a single event triggers multiple notifications like emails, SMS, and app alerts
+* SNS vs. SQS: Unlike SQS (Simple Queue Service), where a message is typically consumed by one receiver, SNS allows one message to be sent to multiple subscribers simultaneously.
+
+Step-by-Step Guide to Using Amazon SNS
+--------------------------------------
+Create a Topic:
+1. Log in to the AWS Management Console and search for SNS.
+2. Navigate to Topics and select Create topic.
+3. Choose a type (Standard is recommended for this demo) and provide a name.
+
+Add Subscribers:
+4. Inside the created topic, go to the Subscriptions tab and select Create subscription.
+5. Choose a protocol (e.g., Email) and enter the endpoint address.
+6. After creating the subscription, you must confirm it via the email link sent to the inbox.
+
+Publish a Message:
+7. Once confirmed, select Publish message in the topic dashboard.
+8. Enter a Subject and a Message body.
+9. Click Publish message to trigger the notification to all confirmed subscribers.
+
+Developer Integration
+10. The video notes that this functionality can be integrated into applications, such as a Spring Boot service, by configuring the topic and using the AWS SDK to programmatically send messages
+
+
+Source: https://www.youtube.com/watch?v=Lq2s_-dX3qE
