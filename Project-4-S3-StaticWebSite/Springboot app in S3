@@ -1,0 +1,32 @@
+Spring Boot File Upload to AWS S3
+=================================
+
+How to build a Spring Boot application that enables users to upload files directly to AWS S3 storage, which is a scalable and secure alternative to local storage.
+
+Step-by-Step Implementation Process
+1. AWS S3 Configuration
+
+Log in to the AWS Console and navigate to the S3 service.
+Click Create bucket, choose a globally unique name, and uncheck Block all public access.
+After creation, go to the Permissions tab and configure the Bucket Policy with a JSON snippet to grant public read access to your files.
+
+2. IAM User Setup
+
+Navigate to the IAM service to create a user for your Spring Boot application.
+Attach the AmazonS3FullAccess policy to this user.
+Generate Access Keys and Secret Keys; these are essential for the application to authenticate with AWS.
+
+3. Spring Boot Development
+
+Dependencies: Add the Amazon AWS SDK dependency to your pom.xml file to enable S3 connectivity.
+Properties: Store your AWS Access Key, Secret Key, Region, and Bucket Name in your application.properties file.
+Controller: Create a REST API with an @RequestParam of type MultipartFile to handle incoming file uploads.
+Service Layer: Use the S3Client and PutObjectRequest classes from the AWS SDK to stream the file data directly into your S3 bucket.
+
+4. Testing the Application
+
+Upload Test: Use Postman to send a file to your API endpoint. You can verify the success by refreshing the S3 bucket in the AWS Console (6:40).
+Delete Test: The video also demonstrates a delete endpoint that uses the DeleteObjectRequest to remove files from S3 by their filename (7:05).
+
+
+Source: https://www.youtube.com/watch?v=GiVg-VaxmJo
