@@ -1,0 +1,16 @@
+Build Log Monitoring System | Spring Boot + CloudWatch Explained
+==================================================================
+
+Practical guide on building a centralized log monitoring system for Spring Boot applications using AWS CloudWatch. 
+The tutorial explains how to move away from local log files to a scalable cloud-based solution, which is essential for microservices architecture and production-grade debugging.
+
+Key sections of the tutorial:
+=============================
+1. Project Overview & Use Cases: The creator discusses why centralized logging is vital for modern production environments, focusing on distributed systems and troubleshooting.
+2. CloudWatch Configuration: Steps to create a Log Group in the AWS Console and assigning the necessary IAM permissions for the application to push logs.
+3. Spring Boot Integration: Demonstrates how the application handles requests and sends log information (Info, Debug, Error) through Logback.
+4. Enabling CloudWatch Logging: Shows the specific property changes required to toggle and verify real-time log ingestion in AWS.
+5. Alerting & Monitoring: A deep dive into creating Metric Filters and setting up CloudWatch Alarms. The video concludes with a live demonstration of triggering an error alert and receiving an automated notification.
+
+
+Source: https://www.youtube.com/watch?v=UkLKndCJt6o
